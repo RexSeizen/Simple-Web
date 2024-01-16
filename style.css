@@ -1,0 +1,255 @@
+:root {
+  --primary: #ffffff;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #ffffff;
+}
+
+/* Nav Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: red;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: var(--primary);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: red;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid red;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.7);
+}
+
+.navbar .navbar-extra a {
+  color: var(--primary);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: red;
+}
+
+#humberger-menu {
+  display: none;
+}
+
+/* Navbar search form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+  transition: 0.3s;
+}
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
+}
+
+/* Media Queris */
+
+/* Laptop */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #humberger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 23rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+}
+
+/* Car Section */
+.car-list .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.car-list .car-card {
+  text-align: center;
+  border: 1px solid white;
+  padding: 2rem;
+}
+
+.car-list .car-image {
+  padding: 1rem 0;
+}
+
+.car-list .car-image img {
+  height: 20rem;
+}
+
+.car-list {
+  margin-top: 8rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.car-list span {
+  color: red;
+}
+
+/* Car Description */
+.car-list .desc {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.car-list .car-desc {
+  text-align: center;
+  border: 1px solid white;
+  padding: 2rem;
+}
+
+.car-list .desc .car-desc img {
+  height: 25rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.car-list .desc .car-desc .car-title {
+  text-align: left;
+}
+
+.car-list .desc .car-desc {
+  display: flex;
+}
+
+/* Car detail */
+.car-list .desc .car-desc .car-image .icons {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.car-content .price-book {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  /* gap: 10rem; */
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
