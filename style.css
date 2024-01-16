@@ -169,6 +169,13 @@ body {
   }
 }
 
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
 /* Car Section */
 .car-list .row {
   display: grid;
@@ -247,9 +254,46 @@ body {
   /* gap: 10rem; */
 }
 
-/* Mobile */
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
-  }
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: var(--bg);
+  margin: 1rem;
+}
+
+footer .socials a:hover {
+  color: red;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a:hover {
+  color: red;
+}
+
+footer .links a {
+  color: var(--bg);
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  color: var(--bg);
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: red;
+  font-weight: 700;
 }
